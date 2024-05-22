@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Dom</title>
+    <script defer>
+                function magicBtnClick() {
+            changeHeading();
+            const newElement = document.createElement("div");
+            newElement.textContent = "Hello, World!";
+            newElement.classList.add("my-class");
+            newElement.className = "text-gray-500"; // TailwindCSS
+
+        }
+
+        function changeHeading(){
+            const textHead = document.getElementById("h1")
+            textHead.textContent = "Hello JavaScript Inner HTML"
+            changeColor(textHead)
+        }
+
+        function changeColor(a) {
+            a.style.color = "red"
+        }
+    </script>
+</head>
+<body>
+    <h1 id="h1">Hello World</h1>
+    <button onclick="magicBtnClick()" id="magic-btn"> 
+        Click me
+    </button>
+
+</body>
+</html>
